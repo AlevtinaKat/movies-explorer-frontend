@@ -1,0 +1,18 @@
+.footer__content {
+    display: grid;
+    grid-template-columns: auto min-content;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer__content {
+        margin: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer__content {
+        grid-template-columns: none;
+        margin: 20px auto 10px auto;
+    }
+}

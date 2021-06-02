@@ -1,0 +1,22 @@
+.techs {
+  width: 100%;
+  background: #272727;
+  height: 625px;
+  display: grid;
+  justify-items: center;
+  padding-top: 90px;
+}
+
+@media screen and (max-width: 768px) {
+  .techs {
+    height: 567px;
+    padding-top: 90px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs {
+    height: 651px;
+    padding-top: 70px;
+  }
+}

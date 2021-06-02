@@ -1,0 +1,18 @@
+.footer__heading {
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #8b8b8b;
+  border-bottom: 1px #dadada solid;
+  padding: 0 0 20px 0;
+  margin: 79px auto auto auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 320px) {
+  .footer__heading {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0 0 21px 0;
+  }
+}

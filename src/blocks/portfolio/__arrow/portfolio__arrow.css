@@ -1,0 +1,20 @@
+.portfolio__arrow {
+  width: 29px;
+  height: 60px;
+  color: #ffffff;
+  right: 0;
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__arrow {
+    width: 27px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio__arrow {
+    width: 18px;
+    height: 28px;
+  }
+}

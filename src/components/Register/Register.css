@@ -1,0 +1,13 @@
+.register {
+    width: 396px;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    margin: 70px 0 0 0;
+    
+}
+
+@media screen and (max-width: 320px) {
+    .register {
+        width: 260px;
+    }
+  }

@@ -1,0 +1,14 @@
+.promo__info {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  height: 471px;
+  background: #073042;
+  width: 100%;
+}
+
+@media screen and (max-width: 320px) {
+  .promo__info {
+    height: 570px;
+  }
+}

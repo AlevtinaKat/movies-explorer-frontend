@@ -1,0 +1,6 @@
+.search {
+  width: calc(100% - 2 * 70px);
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  margin: 60px auto 0 auto;
+}

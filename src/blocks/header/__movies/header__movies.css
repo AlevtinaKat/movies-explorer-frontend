@@ -1,0 +1,15 @@
+.header__movies {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: repeat(1, auto);
+  column-gap: 16px;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: right;
+  color: #ffffff;
+  width: calc(100% - 2 * 534px);
+  justify-content: center;
+  height: 18px;
+  margin: 28px auto;
+}
+

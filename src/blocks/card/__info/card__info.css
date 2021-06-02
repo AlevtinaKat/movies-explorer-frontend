@@ -1,0 +1,7 @@
+.card__info {
+  display: grid;
+  grid-template-columns: auto min-content;
+  border-bottom: 1px #424242 solid;
+  padding: 0 0 29px 0;
+  margin: 14px 0 0 0;
+}

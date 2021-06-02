@@ -1,0 +1,18 @@
+.navigationbox {
+  display: grid;
+  position: absolute;
+  grid-template-rows: max-content max-content max-content auto;
+  row-gap: 28px;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 520px;
+  height: 1024px;
+  margin: 0;
+  list-style: none;
+  background-color: #202020;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.25s;
+  z-index: 10;
+  padding: 159px 0 0 0;
+}

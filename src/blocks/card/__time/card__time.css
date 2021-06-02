@@ -1,0 +1,14 @@
+.card__time {
+  font-size: 11px;
+  line-height: 13px;
+  align-items: center;
+  color: #8b8b8b;
+  margin: 6px 0 38px 0;
+}
+
+@media screen and (max-width: 320px) {
+  .card__time {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
