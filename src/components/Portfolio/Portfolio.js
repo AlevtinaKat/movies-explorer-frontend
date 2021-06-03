@@ -9,34 +9,34 @@ function Portfolio(props) {
       <nav>
         <ul className="portfolio__links">
           <li>
-            <Link className="link portfolio__link line" href="#">
+            <a className="link portfolio__link line" href="https://github.com/AlevtinaKat/how-to-learn">
               Статичный сайт
               <img
                 className="portfolio__arrow"
                 src={arrow}
                 alt="Стрелка"
               />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="link portfolio__link line" href="#">
+            <a className="link portfolio__link line" href="https://alevtinakat.github.io/russian-travel/">
               Адаптивный сайт
               <img
                 className="portfolio__arrow"
                 src={arrow}
                 alt="Стрелка"
               />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="link portfolio__link" href="#">
+            <a className="link portfolio__link" href="https://github.com/AlevtinaKat/mesto">
               Одностраничное приложение
               <img
                 className="portfolio__arrow"
                 src={arrow}
                 alt="Стрелка"
               />
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
