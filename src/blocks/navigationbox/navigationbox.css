@@ -5,7 +5,7 @@
   row-gap: 28px;
   visibility: hidden;
   top: 0;
-  right: -100%;
+  right: 0;
   width: 520px;
   height: 1024px;
   margin: 0;
@@ -15,4 +15,11 @@
   transition-duration: 0.25s;
   z-index: 10;
   padding: 159px 0 0 0;
+}
+
+@media screen and (max-width: 320px) {
+  .navigationbox {
+    width: 320px;
+    height: 780px;
+  }
 }

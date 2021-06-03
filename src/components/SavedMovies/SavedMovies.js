@@ -1,17 +1,23 @@
 import "../../index.css";
-import MoviesCard from "../MoviesCard/MoviesCard";
+
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import SearchForm from "../SearchForm/SearchForm";
+import MoviesCardList from "../MoviesCardList/MoviesCardList";
 
 function SavedMovies(props) {
   return (
-    <section className="movie-cards">
-      <div className="cards">
-        <MoviesCard />
+    <body className="page">
+      <div className="page__container">
+        <Header movies="true" />
+        <SearchForm />
+        <MoviesCardList />
+        <Footer />
       </div>
-      <div className="cards__more">
-        <button class="cards__more-button">Ещё</button>
-      </div>
-    </section>
+    </body>
   );
 }
 
 export default SavedMovies;
+
+

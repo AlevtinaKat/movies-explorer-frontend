@@ -50,7 +50,7 @@ function Register(props) {
               </label>
 
               <button href="#" className="register__button">
-                Заригистрироваться
+                Зарегистрироваться
               </button>
             </form>
             <p className="register__auth">Уже зарегистрированы?

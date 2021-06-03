@@ -90,7 +90,7 @@
 @import url(./blocks/profile/__form/profile__form.css);
 @import url(./blocks/profile/__link/profile__link.css);
 @import url(./blocks/profile/__button/profile__button.css);
-@import url(./blocks/profile/__border-none/profile__border-none.css);
+@import url(./blocks/portfolio/__border-none/portfolio__border-none.css);
 @import url(./blocks/error/error.css);
 @import url(./blocks/register/__title/register__title.css);
 @import url(./blocks/register/__text/register__text.css);
@@ -109,3 +109,4 @@
 @import url(./blocks/errors/__notFound/errors__notFound.css);
 @import url(./blocks/errors/__find/errors__find.css);
 @import url(./blocks/place/place.css);
+@import url(./blocks/header/__background/header__background.css);

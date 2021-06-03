@@ -4,4 +4,15 @@
   border: none;
   background: #313131;
   border-radius: 36px;
+  background-image: url(../../../images/heart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__button-red {
+  background-image: url(../../../images/redHeart.svg);
+}
+
+.card__button-red:hover {
+  background-image: url(../../../images/cross.svg);
 }

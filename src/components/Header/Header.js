@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 
 function Header(props) {
+  const headerClassName = (
+    `header ${props.movies ? '' : 'header__background'}`
+  ); 
   const renderLinks = () => {
     if (props.movies) {
       return (
@@ -37,7 +40,7 @@ function Header(props) {
   };
 
   return (
-    <header className="header">
+    <header className={headerClassName}>
       <img src={logo} className="header__logo" alt="Логотип" />
       {renderLinks()}
     </header>

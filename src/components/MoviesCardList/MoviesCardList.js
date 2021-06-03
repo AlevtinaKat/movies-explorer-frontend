@@ -5,6 +5,12 @@ function MoviesCardList(props) {
   return (
     <section className="movie-cards">
       <div className="cards">
+        <MoviesCard liked="true" />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
         <MoviesCard />
       </div>
       <div className="cards__more">

@@ -3,4 +3,5 @@
   grid-template-rows: repeat(2, max-content);
   justify-items: center;
   width: 100%;
+  background: #073042;
 }
