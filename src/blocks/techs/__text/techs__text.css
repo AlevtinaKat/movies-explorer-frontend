@@ -10,16 +10,15 @@
 
 @media screen and (max-width: 768px) {
   .techs__text {
-    width: calc(100% - 2 * 154px);
     margin: 0 0 83px 0;
     font-size: 12px;
     line-height: 18px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 460px) {
   .techs__text {
-    width: 292px;
+    width: calc(100% - 2 * 14px);
     margin: 0 0 50px 0;
     font-size: 11px;
     line-height: 16px;

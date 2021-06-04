@@ -9,15 +9,15 @@ function SavedMovies(props) {
   return (
     <body className="page">
       <div className="page__container">
-        <Header movies="true" />
-        <SearchForm />
-        <MoviesCardList />
-        <Footer />
+        <main className="main">
+          <Header movies="true" />
+          <SearchForm />
+          <MoviesCardList saved="true" />
+          <Footer />
+        </main>
       </div>
     </body>
   );
 }
 
 export default SavedMovies;
-
-

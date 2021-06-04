@@ -10,6 +10,12 @@
   align-self: center;
 }
 
+@media screen and (max-width: 768px) {
+  .promo__title {
+    width: calc(100% - 2 * 19px);
+  }
+}
+
 @media screen and (max-width: 320px) {
   .promo__title {
     width: 300px;

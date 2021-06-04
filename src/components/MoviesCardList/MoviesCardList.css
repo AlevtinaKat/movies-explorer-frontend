@@ -1,6 +1,7 @@
 .movie-cards {
   width: calc(100% - 2 * 70px);
   display: grid;
+  justify-content: center;
   grid-template-rows: repeat(2, auto);
 }
 

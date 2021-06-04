@@ -1,5 +1,4 @@
-.header__menu{
-    display: grid;
-    grid-template-columns: auto max-content;
-    
+.header__menu {
+  display: grid;
+  grid-template-columns: auto max-content;
 }

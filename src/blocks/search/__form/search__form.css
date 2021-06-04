@@ -1,4 +1,9 @@
 .search__form {
   width: 100%;
   position: relative;
+  padding: 0 22px 0 0;
+}
+
+.search__form input[type="text"] {
+  padding-left: 22px;
 }

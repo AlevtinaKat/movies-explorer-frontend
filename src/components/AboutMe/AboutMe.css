@@ -12,7 +12,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 560px) {
   .about-me {
     width: calc(100% - 2 * 14px);
     margin: 70px auto 0 auto;

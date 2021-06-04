@@ -6,13 +6,13 @@
   column-gap: 270px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   .about-me__information {
     column-gap: 49px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 540px) {
   .about-me__information {
     grid-template-columns: none;
     margin-top: 60px;

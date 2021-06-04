@@ -10,7 +10,7 @@ function Movies(props) {
       <div className="page__container">
         <Header movies="true" />
         <SearchForm />
-        <MoviesCardList />
+        <MoviesCardList liked="true" />
         <Footer />
       </div>
     </body>

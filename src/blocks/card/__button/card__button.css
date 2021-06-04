@@ -13,6 +13,7 @@
   background-image: url(../../../images/redHeart.svg);
 }
 
-.card__button-red:hover {
+.card__button-cross {
   background-image: url(../../../images/cross.svg);
+  cursor: pointer;
 }
