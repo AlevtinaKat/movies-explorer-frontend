@@ -1,0 +1,5 @@
+.cards__more {
+    display: grid;
+    align-self: center;
+    width: 100%;
+}

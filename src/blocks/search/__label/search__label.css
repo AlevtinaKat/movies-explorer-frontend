@@ -1,0 +1,12 @@
+.search__label {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 14px;
+}
+
+.search__label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}

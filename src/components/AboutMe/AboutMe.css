@@ -1,0 +1,20 @@
+.about-me {
+  width: calc(100% - 2 * 70px);
+  display: grid;
+  justify-items: center;
+  margin: 110px 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me {
+    width: calc(100% - 2 * 50px);
+    margin: 90px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .about-me {
+    width: calc(100% - 2 * 14px);
+    margin: 70px auto 0 auto;
+  }
+}

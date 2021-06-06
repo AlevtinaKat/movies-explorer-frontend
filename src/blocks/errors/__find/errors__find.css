@@ -1,0 +1,23 @@
+.errors__find {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #4285f4;
+  margin: 184px auto 60px auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    .errors__find {
+        margin: 184px auto 222px auto;
+    }
+  }
+
+@media screen and (max-width: 320px) {
+  .errors__find {
+    margin: 284px auto 30px auto;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

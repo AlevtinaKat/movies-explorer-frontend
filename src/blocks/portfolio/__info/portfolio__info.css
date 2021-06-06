@@ -1,0 +1,13 @@
+.portfolio__info {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #8b8b8b;
+  mix-blend-mode: normal;
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio__info {
+    font-size: 14px;
+  }
+}

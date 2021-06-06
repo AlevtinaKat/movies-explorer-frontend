@@ -1,0 +1,19 @@
+.header__account {
+  font-weight: 500;
+  width: 100px;
+  height: 32px;
+  opacity: 0.2;
+  border: 2px solid #aaaaaa;
+  box-sizing: border-box;
+  border-radius: 50px;
+  color: #ffffff;
+  background-color: #202020;
+  margin: 21px 70px 21px auto;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header__account {
+    margin: 0;
+  }
+}

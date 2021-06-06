@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+  .place {
+    display: grid;
+    justify-content: end;
+    margin: auto auto 90px auto;
+  }
+}

@@ -1,0 +1,13 @@
+.promo__illustration {
+  width: 320px;
+  height: 320px;
+  margin: auto auto 69px auto;
+}
+
+@media screen and (max-width: 320px) {
+  .promo__illustration {
+    width: 248px;
+    height: 248px;
+    margin: auto auto 180px auto;
+  }
+}

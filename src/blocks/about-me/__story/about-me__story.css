@@ -1,0 +1,23 @@
+.about-me__story {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me__story {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about-me__story {
+    width: 100%;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}

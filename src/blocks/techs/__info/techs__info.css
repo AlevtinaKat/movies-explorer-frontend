@@ -1,0 +1,25 @@
+.techs__info {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  color: #ffffff;
+  border-bottom: 1px #dadada solid;
+  padding: 0 0 23px 0;
+  width: calc(100% - 2 * 70px);
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__info {
+    width: calc(100% - 2 * 50px);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__info {
+    width: calc(100% - 2 * 18px);
+    padding: 0 0 28px 0;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

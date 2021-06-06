@@ -1,0 +1,14 @@
+.navtab__link {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+  margin: 24px auto;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 320px) {
+  .navtab__link {
+    font-size: 11px;
+  }
+}

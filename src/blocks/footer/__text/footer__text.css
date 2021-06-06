@@ -1,0 +1,7 @@
+.footer__text {}
+
+@media screen and (max-width: 320px) {
+    .footer__text {
+        text-align: center;
+    }
+}

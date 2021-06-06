@@ -1,0 +1,14 @@
+.errors__notFound {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 320px) {
+    .errors__notFound {
+      font-size: 12px;
+      line-height: 15px;
+
+    }
+  }

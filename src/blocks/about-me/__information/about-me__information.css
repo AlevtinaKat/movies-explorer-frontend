@@ -1,0 +1,21 @@
+.about-me__information {
+  display: grid;
+  grid-template-columns: auto min-content;
+  width: 100%;
+  margin-top: 66px;
+  column-gap: 270px;
+}
+
+@media screen and (max-width: 860px) {
+  .about-me__information {
+    column-gap: 49px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .about-me__information {
+    grid-template-columns: none;
+    margin-top: 60px;
+    row-gap: 40px;
+  }
+}

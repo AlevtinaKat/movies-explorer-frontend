@@ -1,0 +1,16 @@
+.register__auth {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #8b8b8b;
+  margin-bottom: 70px;
+}
+
+
+@media screen and (max-width: 320px) {
+  .register__auth {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
