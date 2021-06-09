@@ -1,9 +1,13 @@
 .input {
-    width: 100%;
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 13px;
-    color: #FFFFFF;
-    padding: 0 0 16px 0;
-    background-color: #202020;
-  }
+  width: 100%;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #ffffff;
+  padding: 0 0 16px 0;
+  background-color: #202020;
+}
+
+.input:focus {
+  background-color: #202020;
+}
