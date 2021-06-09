@@ -13,7 +13,7 @@ function Main(props) {
     <body className="page">
       <div className="page__container">
         <main className="main">
-          <Header />
+          <Header isLoggedIn={props.isLoggedIn} />
           <Promo />
           <NavTab />
           <AboutProject />

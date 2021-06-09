@@ -1,8 +1,23 @@
 import "../../index.css";
 import logo from "../../images/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import useFormWithValidation from "../../utils/useFormWithValidation";
 
 function Register(props) {
+  const {
+    values,
+    errors,
+    isValid,
+    handleChange,
+    resetForm
+  } = useFormWithValidation({});
+
+  function signup(e) {
+    e.preventDefault();
+    props.onSubmit(values["name"], values["password"], values["email"]);
+    resetForm();
+  }
+
   return (
     <body className="page">
       <div className="page__container">
@@ -10,7 +25,7 @@ function Register(props) {
           <section className="register">
             <img src={logo} alt="Логотип" />
             <h3 className="register__title">Добро пожаловать!</h3>
-            <form className="register__form" name="register_form">
+            <form className="register__form" name="register_form" onSubmit={signup}>
               <label for="name">
                 <p className="register__text">Имя</p>
                 <input
@@ -20,8 +35,10 @@ function Register(props) {
                   required="required"
                   minLength="2"
                   maxLength="30"
+                  value={values["name"] || ''}
+                  onChange={handleChange}
                 />
-                <span id="name-error" className="error"></span>
+                <span id="name-error" className="error">{errors["name"]}</span>
               </label>
 
               <label for="email">
@@ -32,8 +49,10 @@ function Register(props) {
                   name="email"
                   required="required"
                   minLength="8"
+                  value={values["email"] || ''}
+                  onChange={handleChange}
                 />
-                <span id="email-error" className="error"></span>
+                <span id="email-error" className="error">{errors["email"]}</span>
               </label>
 
               <label for="password">
@@ -45,16 +64,19 @@ function Register(props) {
                   required="required"
                   minLength="2"
                   maxLength="30"
+                  value={values["password"] || ''}
+                  onChange={handleChange}
+                  type="password"
                 />
-                <span id="password-error" className="error"></span>
+                <span id="password-error" className="error">{errors["password"]}</span>
               </label>
 
-              <button href="#" className="register__button">
+              <button className="register__button" type="submit" disabled={!isValid}>
                 Зарегистрироваться
               </button>
             </form>
             <p className="register__auth">Уже зарегистрированы?
-              <Link href="#" className="register__link link">
+              <Link to="/signin" className="register__link link">
                 Войти
               </Link>
             </p>
@@ -65,4 +87,4 @@ function Register(props) {
   );
 }
 
-export default Register;
+export default withRouter(Register);

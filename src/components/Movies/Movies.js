@@ -8,10 +8,17 @@ function Movies(props) {
   return (
     <body className="page">
       <div className="page__container">
-        <Header movies="true" />
-        <SearchForm />
-        <MoviesCardList liked="true" />
-        <Footer />
+        <main className="main">
+          <Header movies="true" isLoggedIn={props.isLoggedIn} />
+          <SearchForm onSubmit={props.onSubmit} />
+          <MoviesCardList
+            cards={props.cards}
+            savedCards={props.savedCards}
+            saveMovie={props.saveMovie}
+            deleteMovie={props.deleteMovie}
+          />
+          <Footer />
+        </main>
       </div>
     </body>
   );

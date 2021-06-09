@@ -1,0 +1,7 @@
+.cards__empty {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #8b8b8b;
+  justify-self: center;
+}
