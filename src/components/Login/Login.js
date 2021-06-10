@@ -1,8 +1,23 @@
 import "../../index.css";
 import logo from "../../images/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import useFormWithValidation from "../../utils/useFormWithValidation";
 
 function Login(props) {
+  const {
+    values,
+    errors,
+    isValid,
+    handleChange,
+    resetForm
+  } = useFormWithValidation({});
+
+  function signin(e) {
+    e.preventDefault();
+    props.onSubmit(values["password"], values["email"]);
+    resetForm();
+  }
+
   return (
     <body className="page">
       <div className="page__container">
@@ -10,8 +25,7 @@ function Login(props) {
           <section className="register">
             <img src={logo} alt="Логотип" />
             <h3 className="register__title">Рады видеть!</h3>
-            <form className="register__form" name="register_form">
-
+            <form className="register__form" name="register_form" onSubmit={signin}>
               <label for="email">
                 <p className="register__text">E-mail</p>
                 <input
@@ -20,8 +34,10 @@ function Login(props) {
                   name="email"
                   required="required"
                   minLength="8"
+                  value={values["email"] || ''}
+                  onChange={handleChange}
                 />
-                <span id="email-error" className="error"></span>
+                <span id="email-error" className="error">{errors["email"]}</span>
               </label>
 
               <label for="password">
@@ -33,16 +49,20 @@ function Login(props) {
                   required="required"
                   minLength="2"
                   maxLength="30"
+                  value={values["password"] || ''}
+                  onChange={handleChange}
+                  type="password"
                 />
-                <span id="password-error" className="error"></span>
+                <span id="password-error" className="error">{errors["password"]}</span>
               </label>
 
-              <button href="#" className="register__button">
+              <button className="register__button" type="submit" disabled={!isValid}>
                 Войти
               </button>
             </form>
-            <p className="register__auth">Ещё не зарегистрированы?
-              <Link href="#" className="register__link link">
+            <p className="register__auth">
+              Ещё не зарегистрированы?
+              <Link to="/signup" className="register__link link">
                 Регистрация
               </Link>
             </p>
@@ -53,4 +73,4 @@ function Login(props) {
   );
 }
 
-export default Login;
+export default withRouter(Login);

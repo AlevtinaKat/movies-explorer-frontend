@@ -1,4 +1,5 @@
 import "../../index.css";
+import { Link } from "react-router-dom";
 
 function Errors(props) {
   return (
@@ -7,7 +8,9 @@ function Errors(props) {
         <div className="errors">
           <h1 className="errors__text">404</h1>
           <h2 className="errors__notFound">Страница не найдена</h2>
-          <h3 className="errors__find">Назад</h3>
+          <Link to="/">
+            <h3 className="link errors__find">Назад</h3>
+          </Link>
         </div>
       </div>
     </body>
