@@ -1,6 +1,5 @@
 import "../../index.css";
 import foto from "../../images/foto.jpg";
-import { Link } from "react-router-dom";
 
 function AboutMe(props) {
   return (

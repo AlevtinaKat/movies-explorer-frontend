@@ -10,7 +10,7 @@ function Movies(props) {
       <div className="page__container">
         <main className="main">
           <Header movies="true" isLoggedIn={props.isLoggedIn} />
-          <SearchForm onSubmit={props.onSubmit} />
+          <SearchForm onSubmit={props.onSubmit} saved={false} />
           <MoviesCardList
             cards={props.cards}
             savedCards={props.savedCards}

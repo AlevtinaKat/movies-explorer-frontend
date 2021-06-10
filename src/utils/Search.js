@@ -1,5 +1,6 @@
+const SHORT_FILM_DURATION = 40;
 function search(searchQuery, movies) {
-  const { search = "", shortfilm = false } = searchQuery;
+  const { search = "", shortfilm = false, saved = false } = searchQuery;
 
   const filterKeyword = (movie) => {
     return JSON.stringify(movie.nameRU)
@@ -8,7 +9,7 @@ function search(searchQuery, movies) {
   };
 
   const filterShortfilm = (movie) => {
-    return shortfilm ? movie.duration <= 40 : true;
+    return shortfilm ? movie.duration <= SHORT_FILM_DURATION : true;
   };
 
   return movies.filter(filterShortfilm).filter(filterKeyword);

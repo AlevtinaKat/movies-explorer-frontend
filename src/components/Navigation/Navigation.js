@@ -27,14 +27,14 @@ function Navigation(props) {
           </Link>
         </li>
         <li className="place">
-        <button className="header__account">
-          <img className="header__iconka" src={account} alt="Иконка" />
-          Аккаунт
-        </button>
+          <Link to="/profile">
+            <button className="header__account">
+              <img className="header__iconka" src={account} alt="Иконка" />
+              Аккаунт
+            </button>
+          </Link>
         </li>
       </ul>
-
-      
     </div>
   );
 }

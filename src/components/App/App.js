@@ -19,21 +19,34 @@ function App() {
   const history = useHistory();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [cards, setCards] = useState([]);
-  const [localCards, setLocalCards] = useState([]);
   const [savedCards, setSavedCards] = useState([]);
-  const [currentUser, setCurrentUser] = useState({});
+  const [serverCards, setServerCards] = useState([]);
+  const [serverSavedCards, setServerSavedCards] = useState([]);
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(localStorage.getItem("currentUser"))
+  );
 
   useEffect(() => {
     const navigate = async () => {
       await tokenCheck();
     };
 
+    navigate();
+  }, []);
+
+  useEffect(() => {
     if (isLoggedIn && currentUser) {
       moviesApi
         .getInitialCards()
         .then((cardsData) => {
-          setCards(cardsData);
-          setLocalCards(cardsData);
+          setServerCards(cardsData);
+          const localCard = JSON.parse(localStorage.getItem("cards"));
+          if (cards.length === 0 && !localCard) {
+            setCards(cardsData);
+            localStorage.setItem("cards", JSON.stringify(cardsData));
+          } else {
+            setCards(JSON.parse(localStorage.getItem("cards")));
+          }
         })
         .catch((err) => {
           console.log(err);
@@ -43,15 +56,23 @@ function App() {
         .getInitialCards()
         .then((cardsData) => {
           if (cardsData) {
-            setSavedCards(cardsData.filter((card) => card.owner === currentUser._id));
+            const saved = cardsData.filter(
+              (card) => card.owner === currentUser._id
+            );
+            setServerSavedCards(saved);
+            const localCard = JSON.parse(localStorage.getItem("savedCards"));
+            if (savedCards.length === 0 && !localCard) {
+              setSavedCards(saved);
+              localStorage.setItem("savedCards", JSON.stringify(saved));
+            } else {
+              setSavedCards(JSON.parse(localStorage.getItem("savedCards")));
+            }
           }
         })
         .catch((err) => {
           console.log(err);
         });
     }
-
-    navigate();
   }, [isLoggedIn]);
 
   function tokenCheck() {
@@ -65,6 +86,7 @@ function App() {
         .then((data) => {
           if (data) {
             setCurrentUser(data);
+            localStorage.setItem("currentUser", JSON.stringify(data));
             setIsLoggedIn(true);
           }
         })
@@ -75,8 +97,15 @@ function App() {
   }
 
   function searchMovies(searchQuery) {
-    const filteredMovies = Search(searchQuery, localCards);
-    setCards(filteredMovies);
+    if (searchQuery.saved) {
+      const filteredMovies = Search(searchQuery, serverSavedCards);
+      setSavedCards(filteredMovies);
+      localStorage.setItem("savedCards", JSON.stringify(filteredMovies));
+    } else {
+      const filteredMovies = Search(searchQuery, serverCards);
+      setCards(filteredMovies);
+      localStorage.setItem("cards", JSON.stringify(filteredMovies));
+    }
   }
 
   function signin(password, email) {
@@ -115,10 +144,11 @@ function App() {
     if (!name || !email) {
       return;
     }
-    mainApi
+    return mainApi
       .updateUserInfo(name, email)
       .then((data) => {
         setCurrentUser(data);
+        return;
       })
       .catch((err) => {
         console.log(err);
@@ -127,13 +157,12 @@ function App() {
 
   function signOut() {
     setIsLoggedIn(false);
-    setLocalCards([]);
     setSavedCards([]);
     setCards([]);
     setCurrentUser({});
     localStorage.clear();
-    history.push('/');
-  };
+    history.push("/");
+  }
 
   function saveMovie(card) {
     if (!card) {
@@ -210,11 +239,11 @@ function App() {
           signOut={signOut}
           component={Profile}
         />
-        <Route path="/errors">
-          <Errors />
+        <Route exact path="/">
+          <Main isLoggedIn={isLoggedIn} />
         </Route>
-        <Route path="/">
-          <Main isLoggedIn={isLoggedIn}/>
+        <Route path="*">
+          <Errors />
         </Route>
       </Switch>
     </CurrentUserContext.Provider>

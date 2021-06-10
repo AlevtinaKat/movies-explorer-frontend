@@ -111,3 +111,6 @@
 @import url(./blocks/errors/__find/errors__find.css);
 @import url(./blocks/place/place.css);
 @import url(./blocks/header/__background/header__background.css);
+@import url(./blocks/profile/__update/profile__update.css);
+@import url(./blocks/profile/__update-title/profile__update-title.css);
+@import url(./blocks/profile/__update-link/profile__update-link.css);
