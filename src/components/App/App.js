@@ -208,6 +208,9 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <Switch>
+        <Route exact path="/">
+          <Main isLoggedIn={isLoggedIn} />
+        </Route>
         <Route path="/signup">
           <Register onSubmit={signup} />
         </Route>
@@ -239,9 +242,6 @@ function App() {
           signOut={signOut}
           component={Profile}
         />
-        <Route exact path="/">
-          <Main isLoggedIn={isLoggedIn} />
-        </Route>
         <Route path="*">
           <Errors />
         </Route>
